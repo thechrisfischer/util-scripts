@@ -43,3 +43,25 @@ while i < 10
   i += 1
 end
 
+# Regular expressions
+puts "What do you like most about women?"
+line = gets 
+if line =~ /tits|ass/ 
+  puts "You're just like every other man"
+else
+  puts "Wow -- that's totally unique"
+end
+
+# Blocks and yeild
+def cattle_call
+  puts "Bitches holla"
+  yield
+  yield
+  puts "yeah that's right"
+end
+cattle_call { puts "We love you Chris you're so sexy" }
+
+# Using blocks and iterators
+sluts = %w( black white yellow )
+sluts.each {|sluts| puts "Man I really love #{sluts} bitches"}
+
