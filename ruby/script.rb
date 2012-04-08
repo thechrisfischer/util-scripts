@@ -14,3 +14,9 @@ def talk(name)
 end
 puts talk("Chris")
 
+# Expression interpolation
+def talk_inter(name)
+  result = "My name is #{name} and 3 + 3 is #{3 + 3}"
+  return result
+end
+puts talk_inter('Chris')
