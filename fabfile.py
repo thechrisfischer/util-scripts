@@ -8,3 +8,6 @@ def nscd_status():
 
 def nscd_flush():
   sudo('/usr/sbin/nscd -i hosts', pty=True)
+
+def get_size():
+  sudo('df -h', pty=True)
