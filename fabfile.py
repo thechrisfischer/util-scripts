@@ -11,3 +11,6 @@ def nscd_flush():
 
 def get_size():
   sudo('df -h', pty=True)
+
+def lldp():
+  sudo('lldpctl', pty=True)
