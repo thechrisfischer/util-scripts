@@ -1,4 +1,8 @@
-from fabric.operations import sudo,run
+from fabric.api import *
+from fabric import *
+
+env.user = 'cfischer'
+env.password = '30nFlux12!!@@'
 
 def lsmod_iTCO():
   sudo('lsmod | grep iTCO', pty=True)
@@ -11,3 +15,12 @@ def rmmod_iTCO():
 
 def disk_size():
   sudo('df -h', pty=True)
+
+def run_puppet():
+  sudo('/usr/sbin/puppetd -tv', pty=True)
+
+def supervisor_update():
+  sudo('/usr/bin/supervisorctl update', pty=True)
+
+def supervisor_status():
+  sudo('/usr/bin/supervisorctl status', pty=True)
