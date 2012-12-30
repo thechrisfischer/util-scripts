@@ -22,5 +22,8 @@ def run_puppet():
 def supervisor_update():
   sudo('/usr/bin/supervisorctl update', pty=True)
 
+def virsh_list():
+  sudo('/usr/bin/virsh list', pty=True)
+
 def scribe_size():
   sudo('/usr/bin/du -hc --max-depth=1 /tmp/scribe/', pty=True)
